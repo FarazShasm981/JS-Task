@@ -43,3 +43,14 @@ body{
     justify-content: center;
     text-align: center;
 }
+#display5{
+    border: 1px solid red;
+    height: 100px;
+    line-height: 1.5;
+    width: 300px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

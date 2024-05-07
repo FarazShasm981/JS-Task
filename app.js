@@ -2,6 +2,7 @@ var display = document.getElementById("display");
 var display2 = document.getElementById("display2");
 var display3 = document.getElementById("display3");
 var display4 = document.getElementById("display4");
+var display5 = document.getElementById("display5");
 
 function count() {
   var date = new Date();
@@ -78,14 +79,12 @@ var startYear = new Date(2024);
 var endYear = new Date(2050);
 
 function jan1sunday() {
-
   for (var i = startYear; i <= endYear; i++) {
-    var date1 = new Date(i,0,1);
+    var date1 = new Date(i, 0, 1);
 
-    if(date1.getDay() == 0){
-
+    if (date1.getDay() == 0) {
       console.log(`January 1st ${i} is a Sunday`);
-      
+
       display4.innerHTML += `January 1st ${i} is a Sunday <br>`;
     }
     // console.log(sunday);
@@ -94,4 +93,12 @@ function jan1sunday() {
 }
 jan1sunday();
 
+let randomNumber = Math.floor(Math.random() * 5) + 1;
+console.log(randomNumber);
 
+let userGuessNumber = parseInt(prompt("Write A Number Between 1 to 10"));
+if (randomNumber === userGuessNumber) {
+  display5.innerHTML = "Good Work";
+} else {
+  display5.innerHTML = `Not Matched! Correct Number Was ${randomNumber}`;
+}
